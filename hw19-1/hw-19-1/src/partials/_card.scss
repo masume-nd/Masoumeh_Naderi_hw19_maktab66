@@ -1,0 +1,35 @@
+@import "./responsive";
+@import "./variables";
+.card{
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  background: $light-mode-background-color;
+  .card-image img{
+    border-radius: 7px 7px 0 0 ;
+    width: 100%;
+    height: 150px;
+  }
+  .card-text{
+    padding:0 15px 0 15px;
+    p{
+      font-size: 13px;
+    }
+  }
+  .links{
+    text-decoration: none;
+    h3{
+       color: $light-mode-text-color;
+    }
+  }
+}
+
+.cards-container{
+  margin: 0;
+  background: $light-mode-background-color;
+  display: grid;
+}
+.darkBackground{
+  background: $dark-mode-background-color;
+  color:$dark-mode-text-color;
+}

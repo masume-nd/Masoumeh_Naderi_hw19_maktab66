@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import "./partials/card";
+@import "./partials/navStyles";
+@import "./partials/variables";
+@import "./partials/responsive";
+@import "./partials/selected";
+@import "./partials/searchBox";
+@import "./partials/filterRegion";
+*{
+  font-family: 'Nunito Sans', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+}

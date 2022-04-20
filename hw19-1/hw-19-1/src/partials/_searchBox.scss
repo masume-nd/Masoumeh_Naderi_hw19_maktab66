@@ -1,0 +1,56 @@
+@import "./variables";
+.search{
+  display: inline-block;
+  margin-top: 8rem;
+  position: relative;
+ 
+  input{
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0 0px 30px; 
+  } 
+    .icon-search{
+      position: absolute;
+      left: 10px;
+      color: gray;
+      top: 9px;
+  }
+}
+.search-resault {
+  position: absolute;
+  height: 130px;
+  width: 245px;
+  color: $light-mode-text-color;
+  background: $light-mode-background-color ;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: rgb(0 0 0 / 10%) 0 10px 30px; 
+  .links{
+    text-decoration: none;
+    color: $light-mode-text-color;
+  }
+  p{
+    padding: 20px;
+    margin: 0;
+  }
+  p:hover{
+    background: lightpink;
+  }
+}
+.search-resault::-webkit-scrollbar{
+  display: none;
+}
+#close-btn{
+  cursor: pointer;
+}
+.seach-container{
+  background:$light-mode-background-color;
+}
+.seach-container-dark{
+  background: $dark-mode-background-color;
+  box-shadow: none;
+}
+.dark{
+  background: $dark-mode-content-color;
+  color: $dark-mode-text-color ;
+}

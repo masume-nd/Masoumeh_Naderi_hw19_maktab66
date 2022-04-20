@@ -1,0 +1,37 @@
+
+.back-home-btn {
+	margin: 2rem 3rem;
+	position: relative;
+	.icon {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+	}
+
+	input {
+		padding: 0.5rem 2.5rem;
+		font-size: 1rem;
+		border: none;
+		cursor: pointer;
+	}
+}
+
+.selected-ul{
+  list-style: none;
+}
+.border-countries{
+  div{
+    input {
+      margin: 10px;
+      padding: 7px;
+      width: 140px;
+      border: none;
+      box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 10%);
+    }
+  }
+}
+.button {
+  background: $dark-mode-text-color;
+  color: $light-mode-text-color;
+  box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 10%);
+}

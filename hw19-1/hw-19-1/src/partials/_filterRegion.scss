@@ -1,0 +1,37 @@
+.filter-by-region{
+    width: 176px;
+    display: inline-block;
+    margin-right: 3rem;
+    border-radius: 6px;
+    div{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 13px;
+      width: 150px;
+      cursor: pointer;
+      border: none;
+      color: gray;
+      font-size: 12px;
+      border-radius: 6px;
+      box-shadow: rgb(0 0 0 / 10%) 0 0px 30px; 
+  }
+    .region-ul {
+      padding: 0;
+      position: absolute;
+      list-style: none;
+      box-shadow: rgb(0 0 0 / 10%) 0 10px 30px; 
+      margin: 0;
+    li{
+      padding: 10px 55px;
+    }
+    li:hover{
+      background: lightpink;
+      cursor: pointer;
+    }
+  }
+}
+.dark{
+  background: $dark-mode-content-color ;
+  color: $dark-mode-text-color ;
+}

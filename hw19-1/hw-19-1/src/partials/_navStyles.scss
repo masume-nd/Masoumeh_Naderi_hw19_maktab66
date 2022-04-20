@@ -1,0 +1,42 @@
+@import "./variables";
+.nav-wrapper {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 300;
+	background: $dark-mode-text-color;
+	-webkit-box-shadow: -1px 2px 5px 0px rgba(191, 191, 191, 1);
+	-moz-box-shadow: -1px 2px 5px 0px rgba(191, 191, 191, 1);
+	box-shadow: -1px 2px 5px 0px rgba(191, 191, 191, 1);
+}
+.header-dark {
+	background: $dark-mode-content-color;
+	box-shadow: none;
+	color: $dark-mode-text-color;
+}
+.nav-elements {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	padding: 2rem;
+
+	.background-mode-icon {
+		@include centerFlex;
+		cursor: pointer;
+
+	}
+	.nav-heading {
+		margin-left: 0.5rem;
+		font-size: 1.5rem;
+		@include text-bold;
+	}
+
+	.icon-moon {
+		margin-right: 10px;
+	}
+	.mode{
+		@include semi-bold;
+
+	}
+}
