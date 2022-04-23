@@ -1,5 +1,5 @@
-import React from "react";
-import { Grid, Typography } from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
+import { Typography } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -7,56 +7,59 @@ import ListItemText from "@mui/material/ListItemText";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import ListItemButton from "@mui/material/ListItemButton";
-const Frontend = () => {
+
+const JavaScript =
+   "JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.";
+const ReactTxt =
+   "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.";
+
+const Frontend = ({ activeHandle, isEdited, setIsEdited, newItem }) => {
+   const [frontend, setFrontend] = useState([
+      { title: "JavaScript", desc: JavaScript },
+      { title: "Reactjs", desc: ReactTxt },
+   ]);
+   const handleDelete = (item) => {
+      const newList = frontend.filter((el) => el !== item);
+      setFrontend(newList);
+   };
+
+   const handleEdit = (item) => {
+      setIsEdited(!isEdited);
+   };
+   useEffect(() => {
+      if (newItem) {
+         if (newItem?.skill == 20) {
+            setFrontend([...frontend, newItem]);
+            console.log(newItem, "front");
+         }
+      }
+   },[]);
    return (
       <>
-         <Grid
-            container
-            style={{ height: "75vh" }}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-         >
-            <Grid item xs={6} sx={{ border: 1 }}>
-               <Typography variant="h4">Front-End</Typography>
-               <List>
+         <Typography sx={{ textAlign: "center" }} variant="h4">
+            Front-End
+         </Typography>
+         {frontend.map((item) => {
+            return (
+               <List
+                  sx={{ p: 0 }}
+                  key={item.title}
+                  onClick={() => activeHandle(item)}
+               >
                   <ListItemButton>
                      <ListItem>
-                        <ListItemText primary="JavaScript" />
-                        <ListItemIcon>
+                        <ListItemText>{item.title}</ListItemText>
+                        <ListItemIcon onClick={() => handleDelete(item)}>
                            <DeleteIcon />
                         </ListItemIcon>
-                        <ListItemIcon>
+                        <ListItemIcon onClick={() => handleEdit(item)}>
                            <EditIcon />
                         </ListItemIcon>
                      </ListItem>
                   </ListItemButton>
                </List>
-               <List>
-                  <ListItemButton>
-                     <ListItem>
-                        <ListItemText primary="React.js" />
-                        <ListItemIcon>
-                           <DeleteIcon />
-                        </ListItemIcon>
-                        <ListItemIcon>
-                           <EditIcon />
-                        </ListItemIcon>
-                     </ListItem>
-                  </ListItemButton>
-               </List>
-            </Grid>
-
-            <Grid item xs={6} sx={{ border: 1 }}>
-               <Typography variant="body2">
-                  Node.js is an open-source, cross-platform JavaScript run-time
-                  environment that executes JavaScript code outside of a
-                  browser.
-               </Typography>
-               <Typography variant="body2">
-                  MongoDB is a cross-platform document-oriented database
-                  program. Classified as a NoSQL database program.
-               </Typography>
-            </Grid>
-         </Grid>
+            );
+         })}
       </>
    );
 };

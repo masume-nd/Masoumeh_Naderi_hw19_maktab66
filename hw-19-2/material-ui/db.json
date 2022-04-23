@@ -1,0 +1,26 @@
+{
+   "frontend": [
+      {
+         "JavaScript": "JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification."
+      },
+      {
+         "ReactTxt": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
+      }
+   ],
+   "backend": [
+      {
+         "nodeTxt": "Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser."
+      },
+      {
+         "mongoTxt": "MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program."
+      }
+   ],
+   "webdesign": [
+      {
+         "HTML": "Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser."
+      },
+      {
+         "CSS": "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML."
+      }
+   ]
+}

@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Grids{
+  box-shadow: 1px 1px 6px gainsboro;
+  border-radius: 10px;
+}
