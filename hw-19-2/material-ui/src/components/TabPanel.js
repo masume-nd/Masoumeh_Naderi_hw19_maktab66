@@ -140,11 +140,12 @@ export default function BasicTabs() {
                   )}
                </Grid>
             </Grid>
-            <Grid xs={1} className="Grids">
+            <Grid  sx={{display:"flex" , justifyContent:"center"}} xs={1} className="Grids">
                <Tabs
                   value={value}
                   onChange={handleChange}
                   aria-label="basic tabs example"
+                 
                >
                   <Tab label="Allitems" {...a11yProps(0)} />
                   <Tab label="Frontend" {...a11yProps(1)} />
